@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome Home!</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+</head>
+<body>
+<p class="welcome">Welcome {{username}}</p>
+<br>
+<a href="/gotouploadpage" class="home-login-links">Upload Photo</a>
+</body>
+</html>

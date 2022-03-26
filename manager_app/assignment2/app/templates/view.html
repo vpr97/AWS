@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block content %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/view.css') }}">
+    <form action='{{url_for("display_worker_instances_list")}}' method='GET'>
+        <input class = "details-button" type='submit' value='Back' />
+    </form>
+<br>
+    <table>
+        <tr><td>ID</td><td> {{ instance.id }}</td></tr>
+        <tr><td>Image AMI ID</td><td> {{ instance.image_id }}</td></tr>
+        <tr><td>Key Pair </td><td> {{ instance.key_name }}</td></tr>
+        <tr><td>Public IP Address</td><td>{{ instance.public_ip_address }}</td></tr>
+        <tr><td>State</td><td>{{ instance.state['Name'] }}</td></tr>
+    </table>
+
+
+    <h2>CPU Utilization</h2>
+
+    <div class="graph" id="cpu_plot" style="width:400px;height:200px"></div>
+    
+    <h2>Http Rate</h2>
+
+    <div class="graph" id="http_rate_plot" style="width:400px;height:400px"></div>
+    
+    <script>
+
+        var options = {
+            series: {
+                lines: { show: true },
+                points: { show: true }
+            }
+        };
+
+
+        $.plot($("#cpu_plot"), [ {{ cpu_stats }} ] , options);
+        $.plot($("#http_rate_plot"), [ {{ http_rate_stats }} ] , options);
+        var xaxisLabel = $("<div class='axisLabel xaxisLabel'></div>")
+            .text("Time")
+            .appendTo($('#cpu_plot'));
+
+        var yaxisLabel = $("<div class='axisLabel yaxisLabel'></div>")
+            .text("CPU Utilization")
+            .appendTo($('#cpu_plot'));
+        
+        var xaxisLabel = $("<div class='axisLabel xaxisLabel'></div>")
+            .text("Time")
+            .appendTo($('#http_rate_plot'));
+
+        var yaxisLabel = $("<div class='axisLabel yaxisLabel'></div>")
+            .text("HTTP count")
+            .appendTo($('#http_rate_plot'));
+    </script>
+
+{% endblock %}

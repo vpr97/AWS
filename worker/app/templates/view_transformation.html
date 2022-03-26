@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View Transformation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/transformation.css') }}">
+</head>
+<body>
+<form method="POST">
+
+    <div>
+        <img src="{{normal_name}}" class = "image">
+        <img src="{{blur_name }}" class = "image">
+        <img src="{{shade_name}}" class = "image">
+        <img src="{{spread_name}}" class = "image">
+    </div>
+
+</form>
+</body>
+</html>

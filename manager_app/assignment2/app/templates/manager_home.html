@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Photo Hub Manager</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/manager_home.css') }}">
+</head>
+
+<body>
+
+    <form class="login-form"  method="POST">
+        <div class="login-box">
+            <div class= "login-box-title"><h1>Manager Application</h1></div>
+    <br>
+    <div class= "login-box-title-home"><h3>Home</h3></div>
+ 
+    <button class = "login-button" formaction="/delete_all_S3">Empty S3</button>
+    <button class = "login-button" formaction="/delete_all_rds">Empty RDS Database</button>
+    <p>Click <u><a class="login-links" href='http://assignment-1317859068.us-east-1.elb.amazonaws.com' target="_blank">here</a> </u>to open the Image Transformation application!</p>
+    <a class="login-links" href='{{url_for("display_worker_instances_list")}}' class="login-links">Worker Instances List</a>
+<br>
+    <a class="login-links" href= '{{url_for("start_ec2")}}' class="login-links">Create a Instance</a>
+<br>
+    <a class="login-links" href= '{{url_for("terminate_ec2")}}' class="login-links">Terminate a Instance</a>
+<br>
+    <a class="login-links" href= "{{url_for('stop_manager')}}" class="login-links">Stop Manager</a>
+<br>
+    </div>
+    </form>
+    <p><b>{{error_msg}}</b></p>
+</body>
+
+</html>
+
+{% extends "base.html" %}
+{% block content %}
+<form class="login-form" >
+<div class="login-box">
+</form>
+<b><title class="login-box-title-home">Number of Active Workers</title></b>
+<form class="login-form"  method="POST">
+        
+    <div class="graph" id="worker_plot" style="width:400px;height:200px"></div>
+    
+    <script>
+
+        var options = {
+            series: {
+                lines: { show: true },
+                points: { show: true }
+            }
+        };
+
+        $.plot($("#worker_plot"), [ {{ worker_stats }} ] , options);
+        var xaxisLabel = $("<div class='axisLabel xaxisLabel'></div>")
+            .text("Time")
+            .appendTo($('#worker_plot'));
+
+        var yaxisLabel = $("<div class='axisLabel yaxisLabel'></div>")
+            .text("No of Workers")
+            .appendTo($('#worker_plot'));
+        
+    </script>
+        </div>
+    </form>
+{% endblock %}

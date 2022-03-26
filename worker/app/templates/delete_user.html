@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Photo Hub Delete User</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/delete_user.css') }}">
+</head>
+
+<body>
+    <form class = "delete-account-form" method="POST">
+        <div class= "delete-account-box">
+            <div class= "delete-account-title">Delete User Account</div>
+            <input class = "delete-account-input" type="text" name="username" placeholder="Username" mandatory/>
+            <button class ="delete-account-button" formaction="/delete" type="submit">Delete User</button>
+            <button class ="delete-account-button" type="reset">Reset</button>
+        </div>
+
+    </form>
+    <p class = "delete-error-msg">{{error_msg}}</p>
+</body>

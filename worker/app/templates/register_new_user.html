@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Photo Hub Register User</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/register_user.css') }}">
+</head>
+
+<body>
+    <form class = "create-account-form" method="POST">
+        <div class= "create-account-box">
+            <div class= "create-account-title">Create New Account</div>
+            <input class = "create-account-input" type="text" name="username" placeholder="Username" mandatory/>
+            <br>
+            <input class = "create-account-input" type="password" name="password" placeholder="Password" mandatory/>
+            <br>
+            <input class = "create-account-input" type="password" name="repassword" placeholder="Re-Enter the Password" mandatory/>
+            <br>
+            <input class = "create-account-input" type="email" name="mail" placeholder="Email" mandatory/>
+            <br>
+            <button class ="create-account-button" formaction="/register" type="submit">Create Account</button>
+            <button class ="create-account-button" type="reset">Reset</button>
+        </div>
+
+    </form>
+    <p class = "error-msg">{{error_msg}}</p>
+</body>

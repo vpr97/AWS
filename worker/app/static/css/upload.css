@@ -1,0 +1,86 @@
+body{
+    background-color: aquamarine;
+    margin-top: 50px;
+}
+
+.upload-form,
+.upload-form *{
+    box-sizing: border-box;
+}
+.upload-form{
+    max-width: 400px;
+    margin: 0 auto;
+    border-radius: 5px;
+    overflow: hidden;
+    background: white;
+    padding: 10px;
+    box-shadow: 0 0 15px rgb(0,0,0,0.15)
+}
+
+.upload-box{
+    border: none;
+    border-radius: none;
+    padding: none;
+    margin: 0;
+    display: block;
+}
+
+.upload-box-title{
+    padding: 30px;
+    display: block;
+    text-align: center;
+    margin-bottom: 15px;
+    border: 10px;
+    margin: 0 auto;
+    background:  rgb(0, 206, 137);
+}
+
+.upload-input{
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid rgb(71, 61, 61);
+    outline: none;
+    transition: border-color 0.5s;
+}
+.error-msg{
+    color:red;
+    max-width: 400px;
+    margin: 0 auto;
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 10px;
+    font-weight: bold;
+    font-stretch: absolute
+}
+
+.upload-input:focus{
+    border-color: aquamarine;
+}
+
+.upload-button{
+    padding: 5px;
+    width: 49%;
+    margin-top: 10px;
+    background-color:rgb(0, 206, 137) ;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
+
+.upload-button:active {
+    background-color:rgb(0, 145, 96) ; 
+}
+
+
+.error-msg{
+    color:red;
+    max-width: 400px;
+    margin: 0 auto;
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 10px;
+    font-weight: bold;
+    font-stretch: absolute
+}

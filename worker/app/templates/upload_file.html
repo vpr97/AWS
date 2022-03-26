@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<head xmlns="http://www.w3.org/1999/html">
+    <title>Upload Picture</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/upload.css') }}">
+</head>
+<body>
+    <div>
+        <form class="upload-form" method="POST" enctype="multipart/form-data">
+            <div class="upload-box">
+                <div class= "upload-box-title">Upload Picture</div>
+                <input class = "upload-input" type="text" name="username" placeholder="Username" mandatory/>
+                <br>
+                <input class = "upload-input" type="password" name="password" placeholder="Password" mandatory/>
+                <br>
+
+                <p class = "upload-input">Photo to upload.<input type="url"  name="web_image"> <input type="file" id = "image" name="image" class = "upload-input"></p>
+                <button class ="upload-button" formaction="/upload" type="submit">Upload</button>
+                <button class ="upload-button" formaction="/displayViewThumbnail" type="submit">Display Thumbnail</button>
+                <button class ="upload-button" type="reset">Reset</button>
+            </div>
+        </form>
+    <p class = "error-msg">{{error_msg}}</p>
+    </div>
+</body>

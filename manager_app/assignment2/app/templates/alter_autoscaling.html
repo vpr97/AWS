@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Photo Hub Manager - Tune Auto Scaling</title>
+    <link rel="stylesheet" href="">
+</head>
+<body>
+    <h3>Config Autoscaler</h3>
+    <form action={{>
+       <div>
+           <label>Expand Threshold:</label>
+           <input type="textbox" name="expand_threshold" id="expand_threshold"/>
+           <br>
+           <label>Shrink Threshold:</label>
+           <input type="textbox" name="shrink_threshold" id="shrink_threshold"/>
+           <br>
+           <label>Expand Ratio:</label>
+           <input type="textbox" name="expand_ratio" id="expand_ratio"/>
+           <br>
+            <label>Shrink Ratio:</label>
+           <input type="textbox" name="shrink_ratio" id="shrink_ratio"/>
+           <br>
+            <button>Apply new changes!</button>
+            <button onclick= "{{url_for("stop_asp")}}" >Stop Autoscaler</button>
+       </div>
+    </form>
+   {{error_msg}} 
+</body>
+</head>
+</html>

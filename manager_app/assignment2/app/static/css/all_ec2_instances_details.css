@@ -1,0 +1,22 @@
+body{
+    background-color: aquamarine;
+    margin-top: 50px;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+.details-button{
+    padding-left: 5px;
+    margin-top: 10px;
+    background-color:rgb(0, 206, 137) ;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+}
+
+.details-button:active {
+    background-color:rgb(0, 145, 96) ; 
+}

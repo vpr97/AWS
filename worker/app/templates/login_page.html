@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Photo Hub</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+</head>
+
+<body>
+    <form class="login-form"  method="POST">
+        <div class="login-box">
+            <div class= "login-box-title">Login </div>
+            
+            <input class = "login-input" type="text" name="username" placeholder="Username" mandatory/>
+            <br>
+            <input class = "login-input" type="password" name="password" placeholder="Password" mandatory/>
+            <br>
+            <button class ="login-button" formaction="/home" type="submit">Login</button>
+            <button class ="login-button" formaction="/create_user" type="submit">Signup</button>
+            <button class ="login-button" formaction="/delete_user" type="submit">Delete User</button>
+            <div class="login-links">
+                <a href="/gotorecoverpassword" class="login-links">Forgot Password?</a>
+            </div>
+        </div>
+    </form>
+    <p class = "error-msg">{{error_msg}}</p>
+</body>
+</html>

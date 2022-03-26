@@ -1,0 +1,172 @@
+body{
+    background-color: aquamarine;
+}
+
+.login-form,
+.login-form *{
+    box-sizing: border-box;
+}
+
+.login-box{
+    border: none;
+    border-radius: none;
+    padding: none;
+    margin: 0;
+    display: block;
+}
+
+.login-box-title{
+    padding: 10px;
+    display: block;
+    text-align: center;
+    margin-bottom: 15px;
+    border: 10px;
+    margin: 0 auto;
+    background:  rgb(0, 206, 137);
+}
+.login-box-title-home{
+    padding: 1px;
+    display: block;
+    text-align: center;
+    margin-bottom: 5px;
+    border: 10px;
+    margin: 0 auto;
+    background:  rgb(0, 206, 137);
+}
+
+.login-form{
+    max-width: 400px;
+    margin: 0 auto;
+    border-radius: 5px;
+    overflow: hidden;
+    background: white;
+    padding: 10px;
+    box-shadow: 0 0 15px rgb(0,0,0,0.15)
+}
+
+.login-form{
+    max-width: 400px;
+    margin: 0 auto;
+    border-radius: 5px;
+    overflow: hidden;
+    background: white;
+    padding: 10px;
+    box-shadow: 0 0 15px rgb(0,0,0,0.15)
+}
+
+.login-box{
+    border: none;
+    border-radius: none;
+    padding: none;
+    margin: 0;
+    display: block;
+}
+
+.s3-button{
+    padding-left: 5px;
+    width: 19%;
+    margin-top: 10px;
+    background-color:rgb(0, 206, 137) ;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.s3-button:active {
+    background-color:rgb(0, 145, 96) ; 
+}
+
+.rds-button{
+    padding-left: 5px;
+    width: 19%;
+    margin-top: 10px;
+    background-color:rgb(0, 206, 137) ;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.rds-button:active {
+    background-color:rgb(0, 145, 96) ; 
+}
+
+.login-links{
+    margin-top: 10px;
+    color:black;
+    
+}
+
+.login-links:hover{
+    color: blue;
+    text-decoration: underline;
+}
+
+.graph{
+    background-color:white ;
+}
+.error-msg{
+    color:red;
+    max-width: 400px;
+    margin: 0 auto;
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 10px;
+    font-weight: bold;
+    font-stretch: absolute
+}
+
+.login-button{
+    padding: 5px;
+    width: 49%;
+    margin-top: 10px;
+    background-color:rgb(0, 206, 137) ;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
+
+.login-button:active {
+    background-color:rgb(0, 145, 96) ; 
+}
+
+.login-links{
+    margin-top: 10px;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+}
+
+.login-links:hover{
+    color: blue;
+    text-decoration: underline;
+}
+
+.axisLabel {
+    position: absolute;
+    text-align: center;
+    font-size: 12px;
+}
+
+.xaxisLabel {
+    bottom: -12px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.yaxisLabel {
+    top: 75%;
+    left: -11px;
+    transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -webkit-transform:  rotate(-90deg);
+    transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+}

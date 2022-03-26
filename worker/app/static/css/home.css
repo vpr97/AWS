@@ -1,0 +1,27 @@
+body{
+    background-color: aquamarine;
+    margin-top: 50px;
+}
+
+.welcome{
+    color:black;
+    max-width: 400px;
+    margin: 0 auto;
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+    font-weight: bolder;
+    font-family: Fantasy;
+    font-stretch: absolute;
+}
+
+.home-login-links{
+    color:black;
+    text-align: center;
+    padding-left: 710px;
+}
+
+.home-login-links:hover{
+    color: blue;
+    text-decoration: underline;
+}

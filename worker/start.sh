@@ -1,0 +1,2 @@
+FLASK_APP=run.py FLASK_ENV=development flask run --host=0.0.0.0
+#gunicorn --bind 0.0.0.0:5000 --error-logfile /var/log/error.log --access-logfile /var/log/message.log --capture-output --log-level debug app:webapp

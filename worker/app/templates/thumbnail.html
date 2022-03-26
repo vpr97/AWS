@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thumbnail Display</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/thumbnail.css') }}">
+</head>
+<body>
+<form method="POST">
+<div>
+    {% for item in user_thumb_images %}
+    {% with image_name = (((item.split('/')[-1]).split('.')[0]).split('_')[0]) %} 
+       <a href="{{url_for('view_transformation', image_name= image_name)}}"><img src = "{{item}}" style="width: 250px" class="image"></a>
+    {% endwith %}
+    {% endfor %}
+</div>
+</form>
+</body>
+</html>
