@@ -1,8 +1,8 @@
 
 file='/home/ubuntu/.aws/credentials' 
 
-AWS_ACCESS_KEY_ID='AKIA5GURIKZLXOWNVEFZ'
-AWS_SECRET_KEY='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'
+AWS_ACCESS_KEY_ID='AWS_ACCESS_KEY_ID'
+AWS_SECRET_KEY='AWS_SECRET_KEY'
 
 
 with open(file, 'w') as filetowrite:
