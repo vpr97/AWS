@@ -25,8 +25,8 @@ all_uploaded_images = []
 s3 = boto3.client(
     service_name='s3',
     region_name='us-east-1',
-    aws_access_key_id='AKIA5GURIKZLXOWNVEFZ',
-    aws_secret_access_key='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'
+    aws_access_key_id='Access key',
+    aws_secret_access_key='secret key'
 )
 
 # ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
