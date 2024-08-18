@@ -19,8 +19,8 @@ from app import webapp
 s3 = boto3.client(
     service_name='s3',
     region_name='us-east-1',
-    aws_access_key_id='AKIA5GURIKZLXOWNVEFZ',
-    aws_secret_access_key='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'
+    aws_access_key_id='access key',
+    aws_secret_access_key='secret key'
 )
 
 UPLOAD_FOLDER = '/home/ubuntu/assignment2/app/static/uploads'
